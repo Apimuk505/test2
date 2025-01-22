@@ -1,0 +1,164 @@
+body {
+    background-color: black;
+    overflow: hidden;
+    align-items: center;
+    text-align: center;
+}
+
+#img_test {
+    position: relative;
+    top: -20px;
+    width: 30%;
+    height: 30%;
+}
+
+.h1 {
+    text-align: left;
+    float: left;
+}
+
+.text {
+    top: -60px;
+    color: #4CFFF6;
+}
+
+.main_button {
+    position: relative;
+    top: 50px;
+}
+
+.button {
+    margin-left: 1%;
+    width: 10%;
+    height: 50px;
+    border: 5px solid #4CFFF6;
+    background-color: transparent;
+    color: #ffffff;
+    transition-duration: 500ms;
+}
+
+.button:hover {
+    background-color: #4CFFF6;
+    box-shadow:
+        0 0 10px #4CFFF6,
+        0 0 21px #4CFFF6,
+        0 0 42px #4CFFF6,
+        0 0 82px #ffffff;
+}
+
+.button:active {
+    background-color: transparent;
+}
+
+
+.button .next {
+    position: relative;
+    top: -10px;
+    float: left;
+}
+
+.button .back {
+    position: relative;
+    top: -10px;
+    float: right;
+}
+
+.arrow {
+    position: relative;
+    left: 0px;
+    top: 10px;
+    border: solid rgb(255, 255, 255);
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 10px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transition-duration: 500ms;
+    float: left;
+}
+
+.arrow_back {
+    position: relative;
+    right: -10px;
+    top: 10px;
+    border: solid rgb(255, 255, 255);
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 10px;
+    transform: rotate(130deg);
+    -webkit-transform: rotate(130deg);
+    transition-duration: 500ms;
+    float: left;
+}
+
+.button:hover .arrow {
+    left: 25px;
+}
+
+.button:hover .arrow_back {
+    right: 0.5px;
+}
+
+.header {
+    text-align: center;
+
+    &::after {
+        content: 'ขั้นตอนการเล่น';
+        font-size: 150%;
+        color: #ffffff;
+        text-shadow:
+            0 0 10px #4CFFF6,
+            0 0 21px #4CFFF6,
+            0 0 42px #ffffff;
+    }
+}
+
+@media (max-width: 700px) {
+    .button {
+        position: relative;
+        margin-left: 1%;
+        width: 45%;
+        top: 150px;
+        height: 50px;
+        border: 5px solid #4CFFF6;
+        background-color: transparent;
+        color: #ffffff;
+        transition-duration: 500ms;
+    }
+
+    #img_test {
+        position: relative;
+        top: -20px;
+        width: 70%;
+    }
+
+    .text {
+        font-size: 20px;
+    }
+}
+
+@media (max-height: 700px) {
+    .button {
+        position: relative;
+        margin-left: 1%;
+        width: 40%;
+        height: 50px;
+        top: 10px;
+        border: 5px solid #4CFFF6;
+        background-color: transparent;
+        color: #ffffff;
+        transition-duration: 500ms;
+    }
+
+    .arrow {
+        display: none;
+    }
+
+    .arrow_back {
+        display: none;
+    }
+
+    .text {
+        font-size: 20px;
+    }
+}
