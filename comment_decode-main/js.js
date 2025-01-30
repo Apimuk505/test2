@@ -26,7 +26,6 @@ var wrong_list = []
 var beforewrong = 0
 var beforescore = 0
 
-
 flag = true
 
 
@@ -67,6 +66,12 @@ function start_ask(text_ask, anstrue, ansfalse,ansfalse2,ansfalse3) { //เร�
         number = Math.floor(Math.random() * 4 ) + 1; //สุ่ม
         number_ask.innerHTML = ask_number
         number_img.innerHTML = ask_number
+        var wrong_size = wrong_list.length
+        if (wrong_size%3 == 0 && ask_number !=1){
+            random_wrong = Math.floor(Math.random()*2) +0;
+            usedwrong = wrong_list[random_wrong]
+            console.log("Wrong_used",usedwrong)
+        }
         if (number == 1) { //setข้อถูกในตัวเลือก
             True_ask = 1
             Text_Ans1.innerHTML = anstrue
@@ -101,8 +106,14 @@ function start_ask(text_ask, anstrue, ansfalse,ansfalse2,ansfalse3) { //เร�
 function restart() { //เริมเกมใหม่และsetค่าใหม่
     text_start.innerHTML = "START"
     img.src = ""
-    ask_number = 1
+    ask_number = 0
     ask_score = 0
+    category = 0
+    checkcate = 0
+    wrong_ans = 0
+    beforewrong = 0
+    beforescore = 0
+    flag = true
     score.innerHTML = ask_score
     if (Text_Ans1.style.fontSize > "32px") {
         img.style.width = "30%"
@@ -117,36 +128,19 @@ function next() { //เป็นfunctionให้function start_ask เอาข
         checkhead("เลือกระดับของโจทย์","ระดับม.4","ระดับม.5","ระดับม.6","รวมม.ปลาย")
     }
 
-    else if (ask_number == 1) { //ถ้าดต้องการเพิ่มข้อให้เพิ่มelse if ต่อจาก else if ล่างสุด
-        start_ask("จงหาคำตอบ [(1+1+1)(2+3)(1+1)(2X10¹)+30+(10-3)]","LEG","LOOK","LOCK","LAKE")
-    } else if (ask_number == 2) {
-        start_ask("จงหาคำตอบ 5!+173+4!","LIE","LINE","LEAK","LAST")
-    } else if (ask_number == 3) {
-        start_ask("A={616,617,618} B={618,619,620} หาสมาชิกของ A∩B","BIG","SAD","MAD","DAD")
-    } else if (ask_number == 4) {
-        start_ask("กำหนดให้ประพจน์ p เป็นเท็จ q เป็นจริง และ r เป็นจริง<br> ก. (q∧p)↔[(rv~p)→q] มีค่าความจริงเป็นจริง ถ้าประพจน์นี้ถูก = 14 ถ้าผิด = 20 <br>ข. [pv(~q→p)]∧r มีค่าความจริงเป็นเท็จ ถ้าประพจน์นี้ถูก = 20 ถ้าผิด = 14 <br>หาคำตอบ ก+ข","HE","LIE","CRY","EYE")
-    } else if (ask_number == 5) {
-        start_ask("339 < x < 337 หาค่า x","BEE","FUN","RUN","MOM")
-    } else if (ask_number == 6) {
-        start_ask("จงหาค่าของ 1000-337","EGG","BEE","SEE","CAKE")
-    } else if (ask_number == 7) {
-        start_ask("ลูกบอล 1 ลูก มีเส้นผ่านศูนย์กลางยาว 28 ซม. จงหารัศมีของลูกบอล","HI","OK","NO","ME")
-    } else if (ask_number == 8) {
-        start_ask("","OIL","OUT","ODD","OAK")
-        img.src = "img/A.webp"
-        img.style.display = "inline"
-    } else if (ask_number == 9) {
-        start_ask("","SHE","SON","SUN","RUN")
-        img.src = "img/received_1699451127237795.webp"
-        img1.style.display = 'inline'
-    } else if (ask_number == 10) {
-        start_ask("","SEE","SIR","SAW","SUM")
-        img.src = "img/2.jpeg"
-        img.style.display = "inline"
-        text_start.innerHTML = "REGAME"
-        text_start.style.fontSize = "400%"
-    } else {
-        restart()
+    if (category == 1 ){
+        if (ask_number == 1){
+            start_ask("ฟังก์ชัน f(x) = 3x + 300 + 4 จงหาf(0)","hoe","hit","hog","hop")
+        }
+        if (ask_number == 2){
+            start_ask("ถ้า A = {1,{23},21,{2,{32}}} B={2,{12},{6,{31}},19} จงหา n(A U B)","BOO","BOB","BED","BIN")
+        }
+        if(ask_number == 3){
+            start_ask("จุดศูนย์กลางวงกลมที่มีเส้นผ่านศูนย์กลางระหว่าง (25,25) และ (65,65) ","OH","HI","HE","HA")
+        }
+        if(ask_number == 4){
+            restart()
+        }
     }
 }
 
@@ -362,5 +356,3 @@ function click4() { //ตรวจสอบที่ตัวเลือกท�
         
     }
 }
-
-
