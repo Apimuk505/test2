@@ -15,6 +15,7 @@ const img = document.getElementById("imgtrue_false")
 const number_ask = document.getElementById("number")
 const number_img = document.getElementById("number_img")
 const img1 = document.getElementById("img1")
+const box_score = document.getElementById("box_score")
 
 var ask_number = 0 //ตัวนับข้อ
 var ask_score = 0 //ตัวนับข้อ
@@ -27,7 +28,7 @@ var beforewrong = 0
 var beforescore = 0
 
 flag = true
-
+box_score.style.display = "none"
 
 
 function checkhead(text_ask, head1, head2,head3,head4) { //เริ่มจะทำการปิดส่วนที่ไม่จําเป็นและเปิดส่วนที่จําเป็นและสุ่มข้อที่ถูกและผิดs
@@ -58,6 +59,7 @@ function checkhead(text_ask, head1, head2,head3,head4) { //เริ่มจะ
 function start_ask(text_ask, anstrue, ansfalse,ansfalse2,ansfalse3) { //เริ่มจะทำการปิดส่วนที่ไม่จําเป็นและเปิดส่วนที่จําเป็นและสุ่มข้อที่ถูกและผิดs
     if (button_start.style.display != "none") { //กันerror
         button_start.style.display = "none"
+        box_score.style.display = "inline"
         main_ask.style.display = "inline"
         Choose_Ans.style.display = "inline"
         text_start.innerHTML = "NEXT"
@@ -138,11 +140,29 @@ function next() { //เป็นfunctionให้function start_ask เอาข
         }
         if(ask_number == 3){
             start_ask("","GIG","GO","OH","OAT")
-            img.src = "img/quest2.png"
+            img.src = "img/question3.png"
             img.style.display = "inline"
         }
         if(ask_number == 4){
+            start_ask("พิจารณาสองจุด A(3, 4) และ B(12, 16)จงหาความยาวของเส้นตรงที่เชื่อมระหว่างจุดทั้งสอง","IS","HE","IF","CRY")
+        }
+        if(ask_number == 5){
+            start_ask("","SHE","ZOO","BEE","OK")
+            img.src = "img/question6.png"
+            img.style.display = "inline"
+        }
+        if(ask_number == 6){
+            start_ask("","BE","KEY","SEE","OK")
+            img.src = "img/question4.png"
+            img.style.display = "inline"
+        }
+        if(ask_number == 7){
 
+        }
+        if(ask_number == 8){
+            start_ask("","LEI","LED","RED","SAW")
+            img.src = "img/question5.png"
+            img.style.display = "inline"
         }
     }
 }
@@ -289,7 +309,7 @@ function click3() { //ตรวจสอบที่ตัวเลือกท�
         } else {
             wrong_ans+=1
             ask_number+=1
-            img.src = "img/red_prodpictxmark_2_1484336301-1.png"
+            img.src = "img/IMG_1073.png"
             wrong_list.push(beforewrong)
             console.log(wrong_list)
         }
