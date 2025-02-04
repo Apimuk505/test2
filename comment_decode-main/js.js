@@ -119,8 +119,7 @@ function restart() { //เริมเกมใหม่และsetค่าใ
         img.style.width = "30%"
     }
 }
-
-
+ 
 
 
 function next() { //เป็นfunctionให้function start_ask เอาข้อมูลมาใช้โดยtext_ask=โจทย์ anstrue=ข้อที่ถูก ansfalse=ข้อที่ผิด
@@ -130,16 +129,20 @@ function next() { //เป็นfunctionให้function start_ask เอาข
 
     if (category == 1 ){
         if (ask_number == 1){
-            start_ask("ฟังก์ชัน f(x) = 3x + 300 + 4 จงหาf(0)","hoe","hit","hog","hop")
+            start_ask("","EEL","SEE","LET","YET")
+            img.src = "img/question1.png"
+            img.style.display = "inline"
         }
         if (ask_number == 2){
-            start_ask("ถ้า A = {1,{23},21,{2,{32}}} B={2,{12},{6,{31}},19} จงหา n(A U B)","BOO","BOB","BED","BIN")
+            start_ask("กำหนดว่ามีสองจํานวนที่ผลรวมของพวกมันคือ 1480 และผลต่างของพวกมันคือ 2 จงหาค่าของจํานวนที่มากกว่า","GEL","GO","OWN","OF")
         }
         if(ask_number == 3){
-            start_ask("จุดศูนย์กลางวงกลมที่มีเส้นผ่านศูนย์กลางระหว่าง (25,25) และ (65,65) ","OH","HI","HE","HA")
+            start_ask("","GIG","GO","OH","OAT")
+            img.src = "img/quest2.png"
+            img.style.display = "inline"
         }
         if(ask_number == 4){
-            restart()
+
         }
     }
 }
@@ -161,7 +164,7 @@ function click1() { //ตรวจสอบที่ตัวเลือกท�
         Choose_Ans.style.display = "none"
         number_img.style.display = "none"
         img.style.display = "inline"
-        img.src = "img/tick-icon-sign-symbol-design-free-png.webp"
+        img.src = "img/IMG_1074.PNG"
         score.innerHTML = ask_score
         if (Text_Ans1.style.fontSize > "32px") {
             img.style.width = "30%"
@@ -180,7 +183,7 @@ function click1() { //ตรวจสอบที่ตัวเลือกท�
         } else {
             wrong_ans+=1
             ask_number+=1
-            img.src = "img/red_prodpictxmark_2_1484336301-1.png"
+            img.src = "img/IMG_1073.PNG"
             wrong_list.push(beforewrong)
             console.log(wrong_list)
         }
@@ -214,7 +217,7 @@ function click2() { //ตรวจสอบที่ตัวเลือกท�
         Choose_Ans.style.display = "none"
         number_img.style.display = "none"
         img.style.display = "inline"
-        img.src = "img/tick-icon-sign-symbol-design-free-png.webp"
+        img.src = "img/IMG_1074.PNG"
         score.innerHTML = ask_score
         if (Text_Ans1.style.fontSize > "32px") {
             img.style.width = "30%"
@@ -233,7 +236,7 @@ function click2() { //ตรวจสอบที่ตัวเลือกท�
         } else {
             wrong_ans+=1
             ask_number+=1
-            img.src = "img/red_prodpictxmark_2_1484336301-1.png"
+            img.src = "img/IMG_1073.PNG"
             wrong_list.push(beforewrong)
             console.log(wrong_list)
         }
@@ -267,7 +270,7 @@ function click3() { //ตรวจสอบที่ตัวเลือกท�
         Choose_Ans.style.display = "none"
         number_img.style.display = "none"
         img.style.display = "inline"
-        img.src = "img/tick-icon-sign-symbol-design-free-png.webp"
+        img.src = "img/IMG_1074.PNG"
         score.innerHTML = ask_score
         if (Text_Ans1.style.fontSize > "32px") {
             img.style.width = "30%"
@@ -321,7 +324,7 @@ function click4() { //ตรวจสอบที่ตัวเลือกท�
         Choose_Ans.style.display = "none"
         number_img.style.display = "none"
         img.style.display = "inline"
-        img.src = "img/tick-icon-sign-symbol-design-free-png.webp"
+        img.src = "img/IMG_1074.PNG"
         score.innerHTML = ask_score
         if (Text_Ans1.style.fontSize > "32px") {
             img.style.width = "30%"
@@ -340,7 +343,7 @@ function click4() { //ตรวจสอบที่ตัวเลือกท�
         } else {
             wrong_ans+=1
             ask_number+=1
-            img.src = "img/red_prodpictxmark_2_1484336301-1.png"
+            img.src = "img/IMG_1073.PNG"
             wrong_list.push(beforewrong)
             console.log(wrong_list)
         }
